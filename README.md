@@ -40,32 +40,7 @@ Dự án này sử dụng công nghệ Trí Tuệ Nhân Tạo (AI), cụ thể l
     - Mô hình xác định điểm mốc khuôn mặt (Face Landmark) (nếu có, dựa trên cấu trúc file)
 - **Cơ sở dữ liệu/Lưu trữ**: Lưu trữ embedding trong tệp JSON (có thể nâng cấp lên giải pháp cơ sở dữ liệu chuyên dụng hơn).
 
-## Cấu trúc dự án
-Face-Recognition/
-├── data/
-│   └── embedding.json        # Tệp lưu trữ embedding khuôn mặt đã đăng ký
-├── src/
-│   ├── api/                  # Mã nguồn cho backend API (FastAPI)
-│   │   ├── models/           # Pydantic models cho API request/response
-│   │   ├── routers/          # Các router của API (face_detector, face_embedding, face_landmark)
-│   │   └── helpers/          # Các hàm tiện ích cho API (ví dụ: exception_handler)
-│   ├── common/               # Các module chung
-│   │   ├── base/             # Lớp cơ sở (BaseModel, BaseService)
-│   │   ├── settings/         # Cấu hình dự án
-│   │   │   └── models/       # Pydantic models cho cấu hình (detector, embedding, face_align, landmark)
-│   │   └── utils.py          # Các hàm tiện ích chung (ví dụ: save/load embedding, cosine_similarity)
-│   ├── face_recognite/       # Module chính cho các tác vụ nhận dạng khuôn mặt
-│   │   ├── face_align/       # Căn chỉnh khuôn mặt
-│   │   ├── face_detector/    # Phát hiện khuôn mặt
-│   │   ├── face_embedding/   # Tạo embedding từ khuôn mặt
-│   │   └── face_landmark/    # Xác định điểm mốc khuôn mặt
-│   ├── tests/                # Các tệp kiểm thử (ví dụ: test_face_embedding.py)
-│   ├── app.py                # Mã nguồn giao diện người dùng Streamlit
-│   ├── main.py               # Điểm khởi chạy chính của ứng dụng backend FastAPI
-│   └── weights/              # (Cần tạo thủ công) Thư mục chứa các trọng số của mô hình AI
-├── .env                      # (Cần tạo) Tệp cấu hình môi trường
-├── requirements.txt          # Danh sách các thư viện Python cần thiết
-└── README.md                 # Tệp README này
+![image](https://github.com/user-attachments/assets/02e0eef3-065c-4598-9b11-047ca8e34718)
 
 
 ## Yêu cầu cài đặt (Prerequisites)
